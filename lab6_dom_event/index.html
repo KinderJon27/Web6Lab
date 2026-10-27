@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6: JavaScript DOM dan Event Handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Praktikum 6: JavaScript DOM dan Event Handling</h1>
+        <p class="subtitle">S1 Teknik Informatika - Universitas Pelita Bangsa</p>
+
+        <!-- Latihan 1 & 2 -->
+        <section class="card">
+            <h2>Latihan 1 & 2: Mengubah Teks & Event Click</h2>
+            <h3 id="judul">Judul Awal (Akan Diubah)</h3>
+            <p id="pesan">Pesan awal sebelum tombol diklik.</p>
+            <button id="tombolAksi">Klik untuk Ubah Teks</button>
+        </section>
+
+        <!-- Latihan 3 -->
+        <section class="card">
+            <h2>Latihan 3: Mengubah Kelas dan Gaya CSS</h2>
+            <p id="paragrafGaya">Paragraf ini akan berubah gayanya menggunakan classList.toggle.</p>
+            <button id="tombolGaya">Ubah Gaya CSS</button>
+        </section>
+
+        <!-- Latihan 4 -->
+        <section class="card">
+            <h2>Latihan 4: Event Input & Penghitung Karakter</h2>
+            <label for="inputPesan">Ketik pesan:</label>
+            <input type="text" id="inputPesan" placeholder="Ketik sesuatu...">
+            <p>Sisa karakter: <span id="jumlahKarakter">100</span></p>
+        </section>
+
+        <!-- Latihan 5 -->
+        <section class="card">
+            <h2>Latihan 5: Validasi Form Pendaftaran</h2>
+            <form id="formPendaftaran">
+                <div>
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="usia">Usia:</label>
+                    <input type="number" id="usia" name="usia">
+                </div>
+                <button type="submit">Daftar</button>
+            </form>
+            <p id="pesanForm" class="error-msg"></p>
+        </section>
+
+        <!-- Latihan 6: To-Do List -->
+        <section class="card">
+            <h2>Latihan 6: Daftar Tugas Sederhana (To-Do List)</h2>
+            <div class="todo-input-group">
+                <input type="text" id="inputTugas" placeholder="Tambah tugas baru...">
+                <button id="tambahTugas">Tambah</button>
+            </div>
+            <ul id="daftarTugas"></ul>
+        </section>
+
+        <!-- Mini Project: Form Pendaftaran Workshop -->
+        <section class="card mini-project">
+            <h2>F. Mini Project — Form Pendaftaran Workshop</h2>
+            <form id="workshopForm">
+                <div>
+                    <label for="wsNama">Nama Lengkap:</label>
+                    <input type="text" id="wsNama" required>
+                </div>
+                <div>
+                    <label for="wsEmail">Email:</label>
+                    <input type="email" id="wsEmail" required>
+                </div>
+                <div>
+                    <label for="wsUsia">Usia (Minimal 17 tahun):</label>
+                    <input type="number" id="wsUsia" required>
+                </div>
+                <div>
+                    <label for="wsTopik">Topik Workshop:</label>
+                    <select id="wsTopik">
+                        <option value="Web Development">Web Development</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                    </select>
+                </div>
+                <button type="submit" id="wsBtnDaftar">Daftar Workshop</button>
+            </form>
+            <div id="wsHasil" class="result-box"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
